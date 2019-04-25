@@ -7,8 +7,8 @@ ser = sr.Serial('COM9')
 
 
 
-w_canvas = 500
-h_canvas = 500
+w_canvas = 650
+h_canvas = 650
 
 
 
@@ -30,13 +30,9 @@ class app():
         self.canvas = Canvas(self.leftFrame, width=w_canvas, height=h_canvas,  highlightthickness=6, highlightbackground="black")
         self.canvas.pack()
 
-        self.button1 = Button(self.rightFrame, text="Start Scanning ", fg="red")
-        self.button2 = Button(self.rightFrame, text="Stop Scanning", fg="red")
-
-        self.button1.pack(side=TOP, pady=50)
+        
         self.l=Label(self.rightFrame, text="Current Distance:  MM", bg="red", fg="white")
         self.l.pack()
-        self.button2.pack(side=BOTTOM, pady=50)
 
         self.start_a = 0
         self.start_b = 30
